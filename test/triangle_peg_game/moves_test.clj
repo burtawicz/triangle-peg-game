@@ -1,8 +1,7 @@
 (ns triangle-peg-game.moves-test
   (:require [clojure.test :refer [deftest is testing]]
+            [triangle-peg-game.test-data :refer [test-board]]
             [triangle-peg-game.moves :refer :all]))
-
-(def test-board (assoc-in (new-board 5) [4 :is-pegged?] false))
 
 (deftest ^:unit is-triangular?-test
   (testing "if 0 is a triangular number"
